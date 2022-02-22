@@ -635,7 +635,10 @@ fn fragment(in: FragmentInput) -> [[location(0)]] vec4<f32> {
 #endif // CLUSTERED_FORWARD_DEBUG_CLUSTER_COHERENCY
 
         // tone_mapping
+        // note: this is always false for now
+#ifdef TONE_MAPPING
         output_color = vec4<f32>(reinhard_luminance(output_color.rgb), output_color.a);
+#endif
         // Gamma correction.
         // Not needed with sRGB buffer
         // output_color.rgb = pow(output_color.rgb, vec3(1.0 / 2.2));
