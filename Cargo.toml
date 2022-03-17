@@ -324,6 +324,10 @@ path = "examples/diagnostics/log_diagnostics.rs"
 name = "custom_diagnostic"
 path = "examples/diagnostics/custom_diagnostic.rs"
 
+[[example]]
+name = "bad_state_order"
+path = "examples/ecs/bad_state_order.rs"
+
 # ECS (Entity Component System)
 [[example]]
 name = "ecs_guide"
